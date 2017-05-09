@@ -3,21 +3,24 @@
 
 .container
   position: relative
+  margin: 0 auto
+  max-width: 90%
+  width: 90%
   +desktop
     margin: 0 auto
-    max-width: $desktop - 40px
-    width: $desktop - 40px
+    max-width: $desktop - 120px
+    width: $desktop - 120px
     // Modifiers
     &.is-fluid
-      margin: 0 20px
+      margin: 0 60px
       max-width: none
       width: auto
   +widescreen
-    max-width: $widescreen - 40px
-    width: $widescreen - 40px
+    max-width: $widescreen - 120px
+    width: $widescreen - 120px
   +fullhd
-    max-width: $fullhd - 40px
-    width: $fullhd - 40px
+    max-width: $fullhd - 120px
+    width: $fullhd - 120px
 
 .delete
   +delete

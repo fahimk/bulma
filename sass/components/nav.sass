@@ -1,10 +1,11 @@
-$nav-height: 3.25rem !default
+$logo-height: 44px
 
 // Components
 
 .nav-toggle
-  +hamburger($nav-height)
+  +hamburger($logo-height)
   // Responsiveness
+  align-self: center
   +tablet
     display: none
 
@@ -14,6 +15,7 @@ $nav-height: 3.25rem !default
   flex-grow: 0
   flex-shrink: 0
   font-size: $size-normal
+  font-weight: $weight-semibold
   justify-content: center
   line-height: 1.5
   padding: 0.5rem 0.75rem
@@ -21,7 +23,7 @@ $nav-height: 3.25rem !default
     flex-grow: 1
     flex-shrink: 0
   img
-    max-height: 1.75rem
+    max-height: $logo-height
   .tag
     &:first-child:not(:last-child)
       margin-right: 0.5rem
@@ -111,15 +113,17 @@ a.nav-item
   align-items: stretch
   background-color: $white
   display: flex
-  height: $nav-height
   position: relative
   text-align: center
   z-index: 10
   & > .container
     align-items: stretch
     display: flex
-    min-height: $nav-height
     width: 100%
   // Modifiers
   &.has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)
+  +mobile
+    padding: 15 0
+  +tablet
+    padding: 37px 0
